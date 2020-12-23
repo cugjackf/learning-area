@@ -36,7 +36,7 @@
 
       function draw() {
         ctx.fillRect(-(width/2),-(height/2),width,height);
-        ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
+        ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, 74, 102, 148);/ height>0 can see.
 
         if(posX % 13 === 0) {
           if(sprite === 5) {
@@ -47,7 +47,7 @@
         }
 
         if(posX > width/2) {
-          newStartPos = -((width/2) + 102);
+          var newStartPos = -((width/2) + 102); /ES5  newStartPos is variable
           posX = Math.ceil(newStartPos);
           console.log(posX);
         } else {
